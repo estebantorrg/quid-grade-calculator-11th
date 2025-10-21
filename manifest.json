@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Quid Grade Calculator - Periodo 4",
+  "version": "1.0",
+  "description": "Calculate your current grades for Periodo 4",
+  "permissions": ["activeTab", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://app.quid.pw/dashboard/estudiante/view"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

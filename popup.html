@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 450px; font-family: Arial; margin: 0; padding: 0; }
+    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 16px; }
+    .header h1 { margin: 0; font-size: 18px; }
+    .header p { margin: 4px 0 0; font-size: 12px; opacity: 0.9; }
+    .overall { background: #f8f9fa; padding: 12px; text-align: center; border-bottom: 2px solid #e0e0e0; }
+    .overall-grade { font-size: 32px; font-weight: bold; color: #667eea; }
+    .subjects { max-height: 500px; overflow-y: auto; padding: 12px; }
+    .subject { background: white; border: 1px solid #e0e0e0; padding: 12px; margin-bottom: 10px; border-radius: 8px; }
+    .subject-name { font-weight: bold; font-size: 13px; color: #333; margin-bottom: 4px; }
+    .teacher { font-size: 11px; color: #666; margin-bottom: 8px; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 8px; }
+    .stat { text-align: center; padding: 6px; border-radius: 4px; }
+    .stat-label { font-size: 9px; color: #666; text-transform: uppercase; }
+    .stat-value { font-size: 16px; font-weight: bold; margin-top: 2px; }
+    .stat-current { background: #e3f2fd; color: #1976d2; }
+    .stat-projected { background: #f3e5f5; color: #7b1fa2; }
+    .stat-remaining { background: #fff3e0; color: #f57c00; }
+    .stat-needed { background: #e8f5e9; color: #388e3c; }
+    .stat-needed.danger { background: #ffebee; color: #d32f2f; }
+    .activities { font-size: 10px; }
+    .activity { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid #f0f0f0; }
+    .activity:last-child { border-bottom: none; }
+    .activity-name { flex: 1; color: #666; }
+    .activity-percent { color: #999; margin: 0 8px; }
+    .activity-grade { font-weight: bold; min-width: 35px; text-align: right; }
+    .activity-grade.done { color: #388e3c; }
+    .activity-grade.pending { color: #ccc; }
+    .no-data { text-align: center; padding: 40px; color: #999; }
+    .refresh { background: #667eea; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; width: 100%; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>📊 Calculadora Periodo 4</h1>
+    <p>Tus notas actuales y proyectadas</p>
+  </div>
+  
+  <div class="overall" id="overall">
+    <div style="font-size: 12px; color: #666; margin-bottom: 4px;">PROMEDIO GENERAL</div>
+    <div class="overall-grade" id="overallGrade">-</div>
+    <div style="font-size: 11px; color: #666; margin-top: 4px;">Basado en <span id="subjectCount">0</span> materias</div>
+  </div>
+
+  <div class="subjects" id="subjects">
+    <div class="no-data">Abre la página de calificaciones para cargar datos</div>
+  </div>
+
+  <div style="padding: 12px;">
+    <button class="refresh" id="refreshBtn">Actualizar Datos</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
