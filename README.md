@@ -2,7 +2,6 @@
 
 A browser extension that automatically scrapes, calculates, and projects your academic grades from the Quid platform, giving you a clear and actionable overview of your performance.
 
-![Screenshot of the extension's popup UI](https://i.imgur.com/your-screenshot-url.png) <!-- Suggestion: Replace with a real screenshot or GIF of the extension in action -->
 
 ## Main Features
 
